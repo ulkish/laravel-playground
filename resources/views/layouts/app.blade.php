@@ -8,7 +8,15 @@
 </head>
 <body>
 
-    @yield('content')
+    <div>
+        @yield('content')
+    </div>
+
+    @section('advertisement')
+        <p>
+            Score some new PHP books in my store!
+        </p>
+    @show
 
 </body>
 </html>
