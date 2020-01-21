@@ -1,1 +1,9 @@
-//
+// Body
+$body-bg: blue;
+
+$text-color: #ffffff;
+
+body {
+    background-color: $body-bg;
+    color: $text-color;
+  }
