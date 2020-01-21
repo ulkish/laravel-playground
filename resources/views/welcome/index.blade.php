@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Welcome!</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    </head>
-    <body>
-        <h1>Welcome to mission control!</h1>
-        <p>
-            <a href="{{ route('posts.show', ['id' => 42]) }}">Laravel Hacking and Coffee</a>
-        </p>
+    <h1>This blog will help you streamline your learning!</h1>
 
-    </body>
-</html>
+    <p>
+        Learn, teach, hack, and make friends within one site.
+    </p>
+
+@endsection
