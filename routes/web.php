@@ -21,3 +21,7 @@ Route::get('posts', 'PostsController@index');
 //     'posts/category/{category}/{subcategory?}',
 //     'PostsController@category'
 // );
+
+Route::view('contact', 'contact.index')->name('contact.index');
+
+Auth::routes();
