@@ -15,20 +15,15 @@ class PostTableSeeder extends Seeder
     {
         DB::table('posts')->truncate();
 
-        Post::create([
-            'title' => "Book Review: Laravel: Up and Running",
-            'content' => "The run method begins by executing the Laravel Query Builder’s truncate method (you’ll learn
-            more about the Query Builder later in this chapter). The truncate method will not only delete
-            any records currently found in the events table",
-        ]);
+        $faker = \Faker\Factory::create();
 
-        Post::create([
-            'title' => "Book Review: Code Smart",
-            'content' => "The corresponding UsersTableSeeder.php file doesn’t actually exist, but if it did it would be found
-            in the database/seeds/ directory. Let’s create a seeder for adding a few events to the database. You
-            can create the seeder skeleton using the make:seed command:",
-        ]);
-
+        foreach(range(1,50) as $index)
+        {
+            Post::create([
+                'title'   => $faker->sentence(2),
+                'content' => $faker->paragraphs(1, true),
+            ]);
+        }
 
     }
 }
