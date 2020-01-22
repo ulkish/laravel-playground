@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<p>This message comes from the /views/welcome/index.blade.php file!</p>
 @section('content')
     <h1>This blog will help you streamline your learning!</h1>
 @endsection

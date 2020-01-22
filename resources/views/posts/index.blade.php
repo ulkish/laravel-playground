@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Posts Page</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    </head>
-    <body>
-        <h1>Welcome to the posts index!</h1>
-
+@section('content')
+    <h1>Blog Posts</h1>
         <ul>
             @forelse ($posts as $posts)
                 <li>{{ $posts }}</li>
             @empty
-                <li>No events available.</li>
+                <li>No posts available.</li>
             @endforelse
         </ul>
-
-
-
-    </body>
-</html>
+@endsection

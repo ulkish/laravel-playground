@@ -15,9 +15,9 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('posts/{id}', 'PostsController@show')->name('posts.show');
 
+Route::get('posts', 'PostsController@index');
+
 Route::get(
     'posts/category/{category}/{subcategory?}',
     'PostsController@category'
 );
-
-Route::get('posts', 'PostsController@index');
