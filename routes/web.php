@@ -13,9 +13,7 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('posts/{id}', 'PostsController@show')->name('posts.show');
-
-Route::get('posts', 'PostsController@index');
+Route::resource('posts', 'PostsController');
 
 // Route::get(
 //     'posts/category/{category}/{subcategory?}',
