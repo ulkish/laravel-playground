@@ -3,11 +3,14 @@
 
 @section('content')
     <h1>Blog Posts</h1>
-        <ul>
-            @forelse ($posts as $post)
+    <div class="container">
+
+            @foreach ($posts as $post)
                 <li>{{ $post->title }}</li>
-            @empty
-                <li>No posts available.</li>
-            @endforelse
-        </ul>
+            @endforeach
+    {!! $posts->links('vendor.pagination.simple-bootstrap-4') !!}
+    </div>
+
+
 @endsection
+

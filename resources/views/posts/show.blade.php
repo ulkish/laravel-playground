@@ -1,4 +1,11 @@
-{{-- Output the $id variable. --}}
+@extends('layouts.app')
 
-<p>This is the views/posts/show.blade.php file!</p>
-<p>{{ $name }} has the post ID #{{ $id }}</p>
+@section('content')
+
+<h1>{{ $post->title }}</h1>
+
+<p>
+    {{ $post->content }}
+</p>
+
+@endsection
