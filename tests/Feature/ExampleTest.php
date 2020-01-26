@@ -7,6 +7,7 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic test example.
      *
@@ -27,15 +28,15 @@ class ExampleTest extends TestCase
     public function testNonexistentEndpointReturns404()
     {
         $response = $this->get('/contact');
-        
+
         $response->assertStatus(404);
     }
-    
+
     public function testHomepageContainsProjectName()
     {
         $response = $this->get('/');
 
         $response->assertSeeText('Laravel');
     }
-    
+
 }
