@@ -3,12 +3,20 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
     use Sluggable;
+    use SoftDeletes;
+
+    protected $dates = [
+        'created_at',
+        'deleted_at',
+        'started_at',
+        'updated_at'
+    ];
 
     /**
      * Allows Laravel to create slugs based on title using the
