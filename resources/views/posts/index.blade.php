@@ -8,7 +8,6 @@
             @foreach ($posts as $post)
                 <li>{{ $post->title }}</li>
             @endforeach
-    {!! $posts->links('vendor.pagination.simple-bootstrap-4') !!}
     </div>
 
 

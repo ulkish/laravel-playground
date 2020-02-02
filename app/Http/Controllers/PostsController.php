@@ -14,7 +14,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $posts = Post::all();
+        return view('posts.index')->with('posts', $posts);
     }
 
     /**
@@ -35,7 +36,13 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post          = new Post;
+        $post->title   = $request->title;
+        $post->content = $request->content;
+
+        flash('Post created!')->success();
+
+        return redirect()->route('posts.show')->with('post', $post);
     }
 
     /**

@@ -15,11 +15,6 @@ Route::get('/', 'WelcomeController@index');
 
 Route::resource('posts', 'PostsController');
 
-// Route::get(
-//     'posts/category/{category}/{subcategory?}',
-//     'PostsController@category'
-// );
-
 Route::view('contact', 'contact.index')->name('contact.index');
 
 Auth::routes();
